@@ -1,10 +1,5 @@
-// Router
 const router = require('express').Router();
-const tasks = require('./index');
+const decrypt = require('./index');
 
-// Tasks
-router.get('/', tasks.findAll);
-router.post('/', tasks.buggyRoute);
-
-// Export the router
+router.get('/', decrypt.doDecrypt);
 module.exports = router;

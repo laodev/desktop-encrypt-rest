@@ -1,9 +1,5 @@
-// Router
 const router = require('express').Router();
-const health = require('./index');
+const encrypt = require('./index');
 
-// Health
-router.get('/', health.status);
-
-// Export the router
+router.get('/', encrypt.doEncrypt);
 module.exports = router;

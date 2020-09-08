@@ -1,4 +1,4 @@
-exports.doDecrypt = (req, res, next) => {
+exports.doAuth = (req, res, next) => {
   // Simulate task list, normally this would be retrieved from a database
   const tasks = [
     {'_id': 1, 'name': 'milk'},
