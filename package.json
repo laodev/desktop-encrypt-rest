@@ -1,11 +1,11 @@
 {
-  "name": "Blowfish API Endpoint",
+  "name": "blowfish-api-endpoint",
   "main": "server.js",
   "version": "1.0.0",
   "author": "Liam Obrochta",
   "license": "MIT",
   "repository": "https://github.com/laodev/desktop-encrypt-rest",
   "dependencies": {
-    "express": "^4.16.4",
-  },
+    "express": "^4.16.4"
+  }
 }
