@@ -1,5 +1,3 @@
-'use strict';
-
 const errors = require('../errors');
 
 exports.findAll = (req, res, next) => {

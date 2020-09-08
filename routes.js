@@ -1,21 +1,16 @@
-'use strict';
-
 const router = require('express').Router();
-const middleware = require('./src/middleware');
 const errors = require('./src/errors');
-const healthRouter = require('./src/health/router');
-const taskRouter = require('./src/tasks/router');
+const encryptRouter = require('./src/encrypt/router');
+const decryptRouter = require('./src/decrypt/router');
+const loginRouter = require('./src/login/router')
 
-// Wire up middleware
-router.use(middleware.doSomethingInteresting);
+// Front-end facing routes
+router.use('/encrypt', encryptRouter);
+router.use('/decrypt', decryptRouter);
+router.use('/login', loginRouter);
 
-// Wire up routers
-router.use('/health', healthRouter);
-router.use('/tasks', taskRouter);
-
-// Wire up error-handling middleware
+// Error handling routes
 router.use(errors.errorHandler);
 router.use(errors.nullRoute);
 
-// Export the router
 module.exports = router;
